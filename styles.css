@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}   
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: bisque;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 20px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align: center; 
+}
+
+.nav-bar li {
+    display: inline-block;
+}
+
+.nav-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-bar li a:hover {
+    background-color: #111;
+}
+
+.container {
+    width: 50%;
+    border : 2px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    color :#000;
+    background-color:antiquewhite;
+    padding: 40px 40px;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-section {
+    margin-bottom: 10px;
+}
+
+.form-section textarea::placeholder{
+    color :#000;
+}
+
+.form-section textarea {
+    width: 100%;
+    height: 150px;
+    background: transparent;
+    color : #000;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    resize: none;
+}
+
+
+.before-result textarea {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    height: 150px;
+}
+
+.before-result select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: antiquewhite;
+    color: #000;
+    padding: 10px 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    text-align-last: left ;
+    margin-right: 15px;
+}
+
+.before-result select:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.before-result select option {
+    background-color: antiquewhite;
+    color: black;
+    text-align: left;
+}
+
+.before-result select option:disabled {
+    color: #aaa;
+}
+
+.before-result select::-ms-expand {
+    display: none;
+}
+
+.before-result .custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+.before-result .custom-select::after {
+    content: '\25BC'; 
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: black;
+}
+
+.before-result button {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.before-result button:hover {
+    background-color: #ddd;
+}
+
+.wrapper{
+    position: relative;
+    padding: 10px;
+    background: antiquewhite;
+    border: none;
+    /* outline: none; */
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+.result-content input.text{
+    width: 90%;
+    padding: 10px;
+    color : #555;
+    background: antiquewhite;
+    border: 1px solid #555;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+.result-content button{
+    padding: 10px;
+    background : #5784f5;
+    color : #fff;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.result-content button:active{
+    background: #809ce2;
+}
+
+.result-content button::before{
+    content: "Copied!";
+    position: absolute;
+    top : -15px;
+    right: 0px;
+    background: #5c81dc;
+    padding: 8px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: none;
+}
+
+.result-content button::after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 45px;
+    width: 10px;
+    height: 10px;
+    background: #5c81dc;
+    transform: rotate(225deg);
+    display: none;
+}
+
+.result-content.active button::before, .result-content.active button::after{
+    display: block;
+}

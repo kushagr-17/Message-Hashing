@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Encryption</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="nav-bar">
+        <ul>
+            <li><a href="https://shorturl.at/Ikt56" target="_blank">About SHA</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Message Encryption</h1>
+        
+        <div class="form-section">
+            <h2>Encrypt a Message</h2>
+            <form id="encryptForm">
+                <div class="before-result">
+                    <textarea id="plainText" placeholder="Enter your message here"></textarea>
+                    <div class="custom-select">
+                        <select id="hashAlgorithm">
+                            <option value="" disabled selected hidden>Choose</option>
+                            <option value="SHA-256">SHA-256</option>
+                            <option value="SHA-1">SHA-1</option>
+                            <option value="SHA-384">SHA-384</option>
+                            <option value="SHA-512">SHA-512</option>
+                        </select>
+                    </div>
+                    <button type="submit">Encrypt</button>
+                    <button type="button" id="clearButton">Clear</button>
+                </div>
+            </form>
+            <div class="wrapper hidden" id="encryptedMessageContainer">
+                <div class="result-container">
+                    <h3>Encrypted Message</h3>
+                </div>
+                    <div class="result-content">
+                        <input type ="text" id="encryptedMessage" class="text" readonly></input>
+                        <button id ="hehe"><i class='bx bxs-copy'></i></button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
