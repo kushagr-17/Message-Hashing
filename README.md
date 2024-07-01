@@ -1,7 +1,7 @@
 # Message-Hashing
 This project is a simple web form that allows users to enter a message, select an encryption algorithm, and simulate the encryption of the message.
 
-![View](images/result.png)
+![View](result.png)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
